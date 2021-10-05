@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Coffee 1",
+    "image": "bnd.png",
+    "price": "25$"
+  },
+  {
+    "id": "2",
+    "name": "Coffee 2",
+    "image": "based.png",
+    "price": "30$"
+  },
+  {
+    "id": "3",
+    "name": "Coffee 3",
+    "image": "based.png",
+    "price": "24$"
+  },
+  {
+    "id": "4",
+    "name": "Coffee 4",
+    "image": "based.png",
+    "price": "28$"
+  }
+]
