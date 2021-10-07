@@ -1,15 +1,6 @@
 import React from 'react'
-import { useRouter } from 'next/router'
+import ProductDetails from '../../components/ProductDetails/ProductDetails'
 
-function ProductDetails() {
-  const router = useRouter()
-  const { productId } = router.query
+const ProductId = () => <><ProductDetails /></>
 
-  return (
-    <div>
-      <h1>Detail about product {productId} </h1>
-    </div>
-  )
-}
-
-export default ProductDetails
+export default ProductId

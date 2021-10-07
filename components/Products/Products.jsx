@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+// this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
+import { useEffect, useState } from 'react'
+import ProductItem from '../ProductItem/ProductItem'
 import ProductsData from '../../data/PRODUCTS.json'
 
 const Products = () => {
@@ -11,25 +14,23 @@ const Products = () => {
   }, [])
 
   return (
-    <>
-      <ul>
-        {data.map((dataItem) => (
-          <li key={`ProductItem-${dataItem.id}`}>
-            <Link href={`/products/${dataItem.id}`}>
-              <h3>{dataItem.name}</h3>
-            </Link>
-            <Image
-              src={`/assets/${dataItem.image}`}
-              alt="close"
-              width={30}
-              height={30}
-            />
-
-            <span>{dataItem.price}</span>
-          </li>
+   
+      <ul
+       css={css`
+       display: flex;
+       justufy-content: space-around;
+       padding:0;
+      
+       @media only screen and (max-width: 768px) {
+         flex-direction: column;
+       }
+       `}
+      >
+        {data.map((item) => (
+          <ProductItem key={`ProductItem-${item.id}`} data={item} />
         ))}
       </ul>
-    </>
+    
   )
 }
 

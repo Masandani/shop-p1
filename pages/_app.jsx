@@ -1,13 +1,14 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
-import '../styles/reset.css';
-
+import '../styles/reset.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
 

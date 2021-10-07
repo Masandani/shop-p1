@@ -1,9 +1,8 @@
-/* eslint-disable react/jsx-no-undef */
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Button from '../Button/Button'
 import { validateEmail, validateSubject } from '../../utils/validation'
@@ -68,6 +67,12 @@ export default function Contact() {
     }
   }
   const fontColor = '#554730'
+
+  const inputSubRef = useRef(null)
+  useEffect(() => {
+    inputSubRef.current.focus()
+  }, [])
+
   return (
     <div
       css={css`
@@ -80,7 +85,7 @@ export default function Contact() {
         css={css`
           opacity: 70%;
           margin-left: 90px;
-          padding-right: 200px; 
+          padding-right: 200px;
           margin-top: 100px;
           @media only screen and (max-width: 768px) {
             display: none;
@@ -96,7 +101,7 @@ export default function Contact() {
             flex-direction: column;
             justify-self: center;
             margin-left: 40px;
-            padding-right:20px;
+            padding-right: 20px;
           `}
         >
           <h1
@@ -135,7 +140,7 @@ export default function Contact() {
                 color: ${fontColor};
                 padding: 20px 0;
                 opacity: 70%;
-                width:19rem;
+                width: 19rem;
               `}
             >
               <label htmlFor="subject">Subject</label>
@@ -149,8 +154,8 @@ export default function Contact() {
                   opacity: 50%;
                   outline: none;
                   font-size: 16px;
-                  
                 `}
+                ref={inputSubRef}
                 onChange={handleChangeSubject}
                 type="text"
                 placeholder="Topic"

@@ -4,7 +4,6 @@
 import { css, jsx } from '@emotion/react'
 
 const Button = ({ children, handleClick = () => {}, ...props }) => (
-  // eslint-disable-next-line react/button-has-type
   <div>
     <button
       css={css`
@@ -20,6 +19,7 @@ const Button = ({ children, handleClick = () => {}, ...props }) => (
         font-family: 'Oswald', sans-serif;
         border: none;
         border-radius: 40px;
+        background-color: #cee0e1;
         cursor: pointer;
         width: 18rem;
         margin: 30px 0;
@@ -36,7 +36,7 @@ const Button = ({ children, handleClick = () => {}, ...props }) => (
       `}
       onClick={handleClick}
       className="button"
-      // eslint-disable-next-line react/jsx-props-no-spreading
+      type="button"
       {...props}
     >
       {children}

@@ -34,7 +34,7 @@ export default function Navbar() {
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #929489;
-        border-bottom: 1px solid #929489;
+        
         @media only screen and (max-width: 768px) {
           display: block;
           width: 100%;
@@ -104,6 +104,8 @@ export default function Navbar() {
                 border: none;
                 background-color: #cee0e1;
                 cursor: pointer;
+                margin-right:10px;
+                margin-top:5px;
               `}
               type="button"
               onClick={handleMenu}
@@ -111,6 +113,7 @@ export default function Navbar() {
               <Image
                 css={css`
                   opacity: 70%;
+                 
                 `}
                 src={huButton}
                 alt="Bean"
@@ -125,6 +128,8 @@ export default function Navbar() {
                 border: none;
                 background-color: #cee0e1;
                 cursor: pointer;
+                margin-right:10px;
+                margin-top: 5px;
               `}
               type="button"
               onClick={handleMenu}

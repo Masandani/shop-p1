@@ -2,25 +2,25 @@
   {
     "id": "1",
     "name": "Coffee 1",
-    "image": "bnd.png",
+    "image": "1.png",
     "price": "25$"
   },
   {
     "id": "2",
     "name": "Coffee 2",
-    "image": "based.png",
+    "image": "2.png",
     "price": "30$"
   },
   {
     "id": "3",
     "name": "Coffee 3",
-    "image": "based.png",
+    "image": "3.png",
     "price": "24$"
   },
   {
     "id": "4",
     "name": "Coffee 4",
-    "image": "based.png",
+    "image": "4.png",
     "price": "28$"
   }
 ]
