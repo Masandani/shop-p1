@@ -86,13 +86,13 @@ export default function Contact() {
           opacity: 70%;
           margin-left: 90px;
           padding-right: 200px;
-          margin-top: 100px;
+          margin-top: 85px;
           @media only screen and (max-width: 768px) {
             display: none;
           }
         `}
       >
-        <Image src={grinderImage} alt="Bean" width={500} height={500} />
+        <Image src={grinderImage} alt="Bean" width={600} height={600} />
       </div>
       <div>
         <div
@@ -107,14 +107,12 @@ export default function Contact() {
           <h1
             css={css`
               margin-top: 95px;
-
               display: flex;
               justify-self: start;
               font-family: 'Oswald', sans-serif;
               font-size: calc(2em + 1vw);
               letter-spacing: 1px;
               line-height: 1.5em;
-              text-align: center;
               text-transform: uppercase;
               opacity: 50%;
               -webkit-font-smoothing: antialiased;

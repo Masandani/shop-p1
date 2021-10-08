@@ -3,8 +3,9 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
 import Image from 'next/image'
-import bean2Image from '../../public/assets/mop.png'
-import coffeeRight from '../../public/assets/Cafe-Right.png'
+import logoF from '../../public/assets/logoF.png'
+import coffeeRight from '../../public/assets/C.png'
+import SocialMedia from '../SocialMedia/SocialMedia'
 
 export default function Footer() {
   const backgroundColor = '#516365'
@@ -18,11 +19,37 @@ export default function Footer() {
         background-color: ${backgroundColor};
         display: flex;
         justify-content: space-between;
-        
+        align-items: center;
       `}
     >
-       <Image src={coffeeRight} alt="Bean" width={300} height={80} />
-      <Image src={bean2Image} alt="Bean" width={140} height={20} />
+      <div
+        css={css`
+        padding-left: 15px;
+          @media only screen and (max-width: 768px) {
+            display: none;
+          }
+        `}
+      >
+        <Image
+          css={css`
+          opacity:40%;
+         
+
+          `}
+        src={coffeeRight} alt="Bean" width={250} height={70} />
+        </div>
+        <Image src={logoF} alt="Bean" width={120} height={120} />
+    
+      <div
+        css={css`
+          @media only screen and (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+          }
+        `}
+      >
+        <SocialMedia />
+      </div>
     </div>
   )
 }

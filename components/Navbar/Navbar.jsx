@@ -34,7 +34,7 @@ export default function Navbar() {
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #929489;
-        
+
         @media only screen and (max-width: 768px) {
           display: block;
           width: 100%;
@@ -64,7 +64,9 @@ export default function Navbar() {
           css={css`
             display: flex;
             padding: 0 15px;
+            transition: transform 250ms;
             &:hover {
+              transform: scale(1.2);
               color: ${hoverColor};
             }
             @media only screen and (max-width: 768px) {
@@ -93,7 +95,9 @@ export default function Navbar() {
 
             align-items: center;
             padding: 0 40px;
+            transition: transform 250ms;
             &:hover {
+              transform: scale(1.2);
               color: ${hoverColor};
             }
           `}
@@ -104,8 +108,9 @@ export default function Navbar() {
                 border: none;
                 background-color: #cee0e1;
                 cursor: pointer;
-                margin-right:10px;
-                margin-top:5px;
+                margin-right: 10px;
+                margin-top: 5px;
+                transition: all 0.5s ease-in-out;
               `}
               type="button"
               onClick={handleMenu}
@@ -113,7 +118,6 @@ export default function Navbar() {
               <Image
                 css={css`
                   opacity: 70%;
-                 
                 `}
                 src={huButton}
                 alt="Bean"
@@ -128,8 +132,9 @@ export default function Navbar() {
                 border: none;
                 background-color: #cee0e1;
                 cursor: pointer;
-                margin-right:10px;
+                margin-right: 10px;
                 margin-top: 5px;
+                transition: all 0.5s ease-in-out;
               `}
               type="button"
               onClick={handleMenu}
@@ -151,7 +156,10 @@ export default function Navbar() {
             display: flex;
             align-items: center;
             padding: 0 40px;
+            transition: transform 250ms;
             &:hover {
+              transform: scale(1.2);
+
               color: ${hoverColor};
             }
             @media only screen and (max-width: 768px) {
@@ -166,7 +174,10 @@ export default function Navbar() {
             display: flex;
             align-items: center;
             padding: 0 40px;
+            transition: transform 250ms;
             &:hover {
+              transform: scale(1.2);
+
               color: ${hoverColor};
             }
             @media only screen and (max-width: 768px) {
@@ -181,7 +192,10 @@ export default function Navbar() {
             display: flex;
             align-items: center;
             padding: 0 40px;
+            transition: transform 250ms;
             &:hover {
+              transform: scale(1.2);
+
               color: ${hoverColor};
             }
             @media only screen and (max-width: 768px) {
@@ -203,9 +217,14 @@ export default function Navbar() {
             margin-top: 80px;
             color: #929489;
             background-color: #5e7072;
-
             position: absolute;
             z-index: 10;
+            transition: all 1s ease-out;
+
+            a:focus {
+              transition: all 1s ease-out;
+              color: #333;
+            }
 
             @media only screen and (min-width: 768px) {
               display: none;

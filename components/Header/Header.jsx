@@ -17,6 +17,7 @@ const Header = () => {
         flex-direction: row;
         align-items: center;
         border-bottom: 1px solid #929489;
+        margin-bot: 2px;
       `}
     >
       <Navbar />

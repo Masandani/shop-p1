@@ -20,6 +20,8 @@ const Products = () => {
        display: flex;
        justufy-content: space-around;
        padding:0;
+       margin-bottom:150px;
+      
       
        @media only screen and (max-width: 768px) {
          flex-direction: column;

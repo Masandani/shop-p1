@@ -2,6 +2,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
+import Image from 'next/image'
+import AboutP from '../../public/assets/About.png'
 
 export default function About() {
   const fontColor = '#554730'
@@ -17,7 +19,7 @@ export default function About() {
         line-height: 1.5em;
         text-align: center;
         text-transform: uppercase;
-        height:100vh;
+        height: 100vh;
         p {
           text-align: left;
           padding: 0 25px;
@@ -26,6 +28,7 @@ export default function About() {
           color: #666;
           line-height: 1.7em;
           font-weight: 500;
+          opacity: 70%;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
@@ -35,7 +38,7 @@ export default function About() {
           opacity: 50%;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          color: ${fontColor}
+          color: ${fontColor};
         }
       `}
     >
@@ -47,6 +50,16 @@ export default function About() {
         we can share those flavours with you and make remarkable coffee more
         available, sustainable and consistently delicious.
       </p>
+      <div
+        css={css`
+          display: flex;
+          justify-content: end;
+          opacity: 60%;
+          padding-top: 100px;
+        `}
+      >
+        <Image src={AboutP} alt="Bean" width={500} height={400} />
+      </div>
     </div>
   )
 }

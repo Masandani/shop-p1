@@ -37,7 +37,7 @@ export default function Home() {
           }
         `}
       >
-        <Image src={cupImage} alt="Bean" width={380} height={380} />
+        <Image src={cupImage} alt="Bean" width={500} height={500} />
       </div>
       <div
         css={css`

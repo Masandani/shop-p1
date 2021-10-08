@@ -9,7 +9,7 @@ export default function Shop() {
     <div
       css={css`
         display: flex;
-        height: screen;
+        height:200vh;
       `}
     >
       <Products />
