@@ -3,6 +3,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
 import Image from 'next/image'
+import { H1, Paragraph } from '../index'
 import AboutP from '../../public/assets/About.png'
 
 export default function About() {
@@ -13,43 +14,29 @@ export default function About() {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        font-family: 'Oswald', sans-serif;
-        font-size: 25px;
-        letter-spacing: 1px;
-        line-height: 1.5em;
-        text-align: center;
-        text-transform: uppercase;
+        color: #554730;
+        opacity: 70%;
         height: 100vh;
+        padding: 25px;
         p {
-          text-align: left;
-          padding: 0 25px;
-          font-family: Open Sans, Arial, sans-serif;
-          font-size: 14px;
+          text-align: right;
+
           color: #666;
           line-height: 1.7em;
-          font-weight: 500;
-          opacity: 70%;
+
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-        }
-        h2 {
-          display: flex;
-          padding-left: 40px;
-          opacity: 50%;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          color: ${fontColor};
         }
       `}
     >
-      <h2>About</h2>
-      <p>
-        We’re obsessed with coffee and the range of flavours that speciality
-        coffee can offer. We travel the world in search of the best coffee on
-        the planet, from some of the most outstanding coffee producers so that
-        we can share those flavours with you and make remarkable coffee more
-        available, sustainable and consistently delicious.
-      </p>
+      <H1>درباره</H1>
+      <Paragraph>
+        ما علاقه زیادی به قهوه و طعم هایی که قهوه تخصصی می تواند ارائه دهد
+        داریم. ما در جستجوی بهترین قهوه روی کره زمین ، از برخی از برجسته ترین
+        تولیدکنندگان قهوه ، به سراسر جهان سفر می کنیم تا بتوانیم آن طعم ها را با
+        شما به اشتراک بگذاریم و قهوه خوشمزه و قابل توجهی را بصورت پایدار در
+        دسترس شما قرار دهیم.
+      </Paragraph>
       <div
         css={css`
           display: flex;

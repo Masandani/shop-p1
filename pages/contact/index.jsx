@@ -1,10 +1,14 @@
 import React from 'react'
 import Contact from '../../components/Contact/Contact'
+import Layout from '../../components/Layout/Layout'
 
 function index() {
   return (
     <div>
-      <Contact />
+      <Layout>
+        {' '}
+        <Contact />
+      </Layout>
     </div>
   )
 }

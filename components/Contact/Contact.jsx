@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Button from '../Button/Button'
 import { validateEmail, validateSubject } from '../../utils/validation'
 import grinderImage from '../../public/assets/grinder.png'
+import { H2, Space, InputText, InputEmail, InputTextArea } from '../index'
 
 export default function Contact() {
   const [subject, setSubject] = useState('')
@@ -78,50 +79,26 @@ export default function Contact() {
       css={css`
         display: flex;
         flex-direction: row;
-        height: 110vh;
+        height: 100vh;
       `}
     >
-      <div
-        css={css`
-          opacity: 70%;
-          margin-left: 90px;
-          padding-right: 200px;
-          margin-top: 85px;
-          @media only screen and (max-width: 768px) {
-            display: none;
-          }
-        `}
-      >
-        <Image src={grinderImage} alt="Bean" width={600} height={600} />
-      </div>
       <div>
         <div
           css={css`
             display: flex;
             flex-direction: column;
             justify-self: center;
-            margin-left: 40px;
+            margin-right: 40px;
             padding-right: 20px;
+            color: #554730;
+            opacity: 70%;
           `}
         >
-          <h1
-            css={css`
-              margin-top: 95px;
-              display: flex;
-              justify-self: start;
-              font-family: 'Oswald', sans-serif;
-              font-size: calc(2em + 1vw);
-              letter-spacing: 1px;
-              line-height: 1.5em;
-              text-transform: uppercase;
-              opacity: 50%;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              color: ${fontColor};
-            `}
-          >
-            Contact
-          </h1>
+          <Space />
+          <Space />
+          <Space />
+          <Space />
+          <H2> تماس با ما</H2>
           {/* new form */}
           <form>
             <div
@@ -129,7 +106,6 @@ export default function Contact() {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                font-family: 'Oswald', sans-serif;
                 font-size: calc(1em + 0.4vw);
                 letter-spacing: 1px;
                 line-height: 1.5em;
@@ -141,23 +117,14 @@ export default function Contact() {
                 width: 19rem;
               `}
             >
-              <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject">موضوع</label>
 
-              <input
-                css={css`
-                  border: none;
-                  background-color: #cee0e1;
-                  border-bottom: 1px solid ${fontColor};
-                  padding-top: 15px;
-                  opacity: 50%;
-                  outline: none;
-                  font-size: 16px;
-                `}
-                ref={inputSubRef}
-                onChange={handleChangeSubject}
-                type="text"
+              <InputText
+                inputSubRef={inputSubRef}
+                handleChangeSubject={handleChangeSubject}
                 placeholder="Topic"
               />
+
               <div>
                 {' '}
                 {errors.subject && (
@@ -180,7 +147,6 @@ export default function Contact() {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                font-family: 'Oswald', sans-serif;
                 font-size: calc(1em + 0.4vw);
                 letter-spacing: 1px;
                 line-height: 1.5em;
@@ -191,18 +157,9 @@ export default function Contact() {
                 opacity: 70%;
               `}
             >
-              <label htmlFor="email">Email address</label>
-              <input
-                css={css`
-                  border: none;
-                  background-color: #cee0e1;
-                  border-bottom: 1px solid ${fontColor};
-                  padding-top: 15px;
-                  opacity: 50%;
-                  outline: none;
-                  font-size: 16px;
-                `}
-                onChange={handlelChangeEmail}
+              <label htmlFor="email">ایمیل</label>
+              <InputEmail
+                handlelChangeEmail={handlelChangeEmail}
                 type="email"
                 placeholder="name@example.com"
               />
@@ -228,7 +185,6 @@ export default function Contact() {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                font-family: 'Oswald', sans-serif;
                 font-size: calc(1em + 0.4vw);
                 letter-spacing: 1px;
                 line-height: 1.5em;
@@ -239,26 +195,16 @@ export default function Contact() {
                 opacity: 70%;
               `}
             >
-              <label htmlFor="textarea">your request</label>
-              <input
-                css={css`
-                  border: none;
-                  background-color: #cee0e1;
-                  border-bottom: 1px solid ${fontColor};
-                  padding-top: 15px;
-                  opacity: 50%;
-                  focus: none;
-                  outline: none;
-                  font-size: 16px;
-                `}
-                onChange={handleChangeTextArea}
-                as="textarea"
+              <label htmlFor="textarea">در خواست شما</label>
+              <InputTextArea
+                handleChangeTextArea={handleChangeTextArea}
+                type="textarea"
                 placeholder="Messege"
               />
             </div>
           </form>
           <div>
-            <Button handleClick={handleSubmit}>Send</Button>
+            <Button handleClick={handleSubmit}>ارسال</Button>
           </div>
           <span
             css={css`
@@ -273,6 +219,19 @@ export default function Contact() {
             {sent}
           </span>
         </div>
+      </div>
+      <div
+        css={css`
+          opacity: 70%;
+          margin-left: 90px;
+          padding-right: 200px;
+          margin-top: 85px;
+          @media only screen and (max-width: 768px) {
+            display: none;
+          }
+        `}
+      >
+        <Image src={grinderImage} alt="Bean" width={600} height={600} />
       </div>
     </div>
   )

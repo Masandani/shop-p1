@@ -1,10 +1,13 @@
 import React from 'react'
 import Home from '../../components/Home/Home'
+import Layout from '../../components/Layout/Layout'
 
 function index() {
   return (
     <div>
-      <Home />
+      <Layout>
+        <Home />
+      </Layout>
     </div>
   )
 }

@@ -11,15 +11,19 @@ import {
 const SocialMedia = () => (
   <div
     css={css`
+    display: flex;
       padding: 0 30px;
       font-size: 40px;
-      color: white;
       opacity: 70%;
+      a {
+        color: white;
+      }
     `}
   >
     <a
       css={css`
-        padding: 0 5px;
+        display: flex;
+        align-items: center;
       `}
       href="https://www.instagram.com/moh_r_mas/"
     >
@@ -27,7 +31,8 @@ const SocialMedia = () => (
     </a>
     <a
       css={css`
-        padding: 0 5px;
+        display: flex;
+        align-items: center;
       `}
       href="http://youtube.com/"
     >
@@ -35,7 +40,8 @@ const SocialMedia = () => (
     </a>
     <a
       css={css`
-        padding: 0 5px;
+        display: flex;
+        align-items: center;
       `}
       href="http://www.facebook.com/"
     >

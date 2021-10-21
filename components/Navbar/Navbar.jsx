@@ -9,6 +9,7 @@ import Image from 'next/image'
 import coffeeBean from '../../public/assets/coffee-bean.png'
 import huButton from '../../public/assets/hu.png'
 import closeButton from '../../public/assets/close.png'
+import { H5 } from '../index'
 
 export default function Navbar() {
   const hoverColor = '#516365'
@@ -30,10 +31,16 @@ export default function Navbar() {
         align-items: center;
         height: 80px;
         top: 0;
-        font-family: 'Oswald', sans-serif;
+        font-family: Shabnam;
         letter-spacing: 2px;
         text-transform: uppercase;
+        background-color: transparent;
         color: #929489;
+        a {
+          text-decoration: none;
+          color: #929489;
+          font-weight: bold;
+        }
 
         @media only screen and (max-width: 768px) {
           display: block;
@@ -63,8 +70,11 @@ export default function Navbar() {
         <div
           css={css`
             display: flex;
-            padding: 0 15px;
+
+            padding: 15px;
             transition: transform 250ms;
+            text-decoration: none;
+            background-color: transparent;
             &:hover {
               transform: scale(1.2);
               color: ${hoverColor};
@@ -74,7 +84,10 @@ export default function Navbar() {
             }
           `}
         >
-          <Link href="/">Mohammadreza-Bean</Link>
+          <H5>
+            {' '}
+            <Link href="/">قهوه-محمدرضا</Link>
+          </H5>
         </div>
       </div>
       <div
@@ -167,7 +180,7 @@ export default function Navbar() {
             }
           `}
         >
-          <Link href="/products">Shop</Link>
+         <H5> <Link href="/products">فروشگاه</Link></H5>
         </div>
         <div
           css={css`
@@ -185,12 +198,12 @@ export default function Navbar() {
             }
           `}
         >
-          <Link href="/contact">Contact</Link>
+          <H5> <Link href="/contact">تماس</Link></H5>
         </div>
         <div
           css={css`
             display: flex;
-            align-items: center;
+
             padding: 0 40px;
             transition: transform 250ms;
             &:hover {
@@ -203,7 +216,7 @@ export default function Navbar() {
             }
           `}
         >
-          <Link href="/about">About</Link>
+         <H5> <Link href="/about">درباره</Link></H5>
         </div>
       </div>
       {clickHu && (
@@ -241,7 +254,7 @@ export default function Navbar() {
             `}
           >
             {' '}
-            <Link href="/">HOME</Link>
+            <Link href="/">خانه</Link>
           </span>
           <span
             css={css`
@@ -253,7 +266,7 @@ export default function Navbar() {
             `}
           >
             {' '}
-            <Link href="/products">SHOP</Link>
+            <Link href="/products">فروشگاه</Link>
           </span>
           <span
             css={css`
@@ -265,7 +278,7 @@ export default function Navbar() {
             `}
           >
             {' '}
-            <Link href="/contact">CONTACT</Link>
+            <Link href="/contact">تماس با ما</Link>
           </span>
           <span
             css={css`
@@ -276,7 +289,7 @@ export default function Navbar() {
             `}
           >
             {' '}
-            <Link href="/about">ABOUT</Link>
+            <Link href="/about">درباره</Link>
           </span>
         </div>
       )}

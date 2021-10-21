@@ -12,19 +12,37 @@ export default function Footer() {
   return (
     <div
       css={css`
-        position: sticky;
         width: 100%;
-        height: 130px;
-        top: 0;
+        height: 80px;
+
         background-color: ${backgroundColor};
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: fixed;
+        bottom: 0;
       `}
     >
       <div
         css={css`
-        padding-left: 15px;
+          display: flex;
+          align-items: center;
+          @media only screen and (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+          }
+        `}
+      >
+        <SocialMedia />
+      </div>
+   
+      <Image css={css``} src={logoF} alt="Bean" width={120} height={120} />
+
+      
+      <div
+        css={css`
+          padding-left: 15px;
           @media only screen and (max-width: 768px) {
             display: none;
           }
@@ -32,23 +50,14 @@ export default function Footer() {
       >
         <Image
           css={css`
-          opacity:40%;
-         
-
+            opacity: 40%;
+            background-color: transparent;
           `}
-        src={coffeeRight} alt="Bean" width={250} height={70} />
-        </div>
-        <Image src={logoF} alt="Bean" width={120} height={120} />
-    
-      <div
-        css={css`
-          @media only screen and (max-width: 768px) {
-            display: flex;
-            justify-content: center;
-          }
-        `}
-      >
-        <SocialMedia />
+          src={coffeeRight}
+          alt="Bean"
+          width={250}
+          height={70}
+        />
       </div>
     </div>
   )

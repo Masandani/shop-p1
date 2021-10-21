@@ -1,15 +1,14 @@
-import React from 'react'
-import Layout from '../components/Layout/Layout'
-import '../styles/reset.css'
+import { ThemeProvider } from "@emotion/react";
+import theme from "../config/theme";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
-    <>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />;
+    </ThemeProvider>
+  );
+};
 
-export default MyApp
+export default MyApp;
+
+// setup emotion-theming (npm i emotion-theming)

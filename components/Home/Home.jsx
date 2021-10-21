@@ -5,9 +5,9 @@ import { css, jsx } from '@emotion/react'
 import Image from 'next/image'
 import cupImage from '../../public/assets/cup.png'
 import bndImage from '../../public/assets/based.png'
+import { H1 } from '../index'
 
 export default function Home() {
-  
   return (
     <div
       css={css`
@@ -31,9 +31,11 @@ export default function Home() {
           padding-left: 50px;
           opacity: 75%;
           @media only screen and (max-width: 768px) {
+            margin-top: 40px;
             padding-right: 50px;
             display: flex;
             align-content: flex-start;
+            max-width: 450px;
           }
         `}
       >
@@ -41,8 +43,7 @@ export default function Home() {
       </div>
       <div
         css={css`
-          text-align: start;
-          padding:100px;
+          padding: 100px;
           color: #554730;
           opacity: 60%;
           margin: 0;
@@ -52,53 +53,9 @@ export default function Home() {
           }
         `}
       >
-        <h2
-          css={css`
-            text-align: start;
-            font-family: 'Oswald', sans-serif;
-            font-size: calc(2.5em + 1vw);
-            letter-spacing: 1px;
-            line-height: 1.5em;
-            text-transform: uppercase;
-            margin:0;
-            @media only screen and (max-width: 768px) {
-              text-align: center;
-            }
-          `}
-        >
-          Quality Coffee
-        </h2>
-        <h2
-          css={css`
-            font-family: 'Oswald', sans-serif;
-            font-size: calc(2.5em + 1vw);
-            letter-spacing: 1px;
-            line-height: 1.5em;
-            text-transform: uppercase;
-            margin:0;
-            @media only screen and (max-width: 768px) {
-              text-align: center;
-            }
-          `}
-        >
-          From Bean
-        </h2>
-        <h2
-          css={css`
-            font-family: 'Oswald', sans-serif;
-            font-size: calc(2.5em + 1vw);
-            letter-spacing: 1px;
-            line-height: 1.5em;
-            text-transform: uppercase;
-            margin:0;
-            @media only screen and (max-width: 768px) {
-              text-align: center;
-            }
-          `}
-        >
-          {' '}
-          To Cup
-        </h2>
+        <H1>قهوه با کیفیت</H1>
+        <H1>از دانه</H1>
+        <H1> تا فنجان</H1>
       </div>
       <div
         css={css`
