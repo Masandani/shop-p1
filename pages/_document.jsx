@@ -1,14 +1,9 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import Reset from "../containers/Reset/Reset";
+import React from 'react'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import Reset from '../containers/Reset/Reset'
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
+class Document extends NextDocument {
   render() {
     return (
       <Html>
@@ -19,8 +14,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default Document

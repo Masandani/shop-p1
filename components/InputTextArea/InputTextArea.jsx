@@ -4,17 +4,17 @@
 import { css, jsx } from '@emotion/react'
 import Input from '../Input/Input'
 
-const InputTextArea = ({ placeholder,handlelChangeEmail }) => (
+const InputTextArea = ({ placeholder, handleChangeTextArea,type }) => (
   <div
     css={css`
       width: 100%;
     `}
   >
     <Input
-     type="email"
+      type={type}
       placeholder={placeholder}
-      handlelChangeEmail={handlelChangeEmail}
-      />
+      handleChangeTextArea={handleChangeTextArea}
+    />
   </div>
 )
 

@@ -7,8 +7,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { RiAddFill } from 'react-icons/ri'
 import { MdOutlineRemoveShoppingCart } from 'react-icons/md'
-import Button from '../Button/Button'
+import Button from '../../components/Button/Button'
 import CartContext from '../../context/CartContext'
+import { H4, Small } from '../../components/index'
 
 const ProductItem = ({ data }) => {
   const { carts, dispatchCart } = useContext(CartContext)
@@ -63,13 +64,8 @@ const ProductItem = ({ data }) => {
         />
       </Link>
       <Link href={`/products/${data.id}`}>
-        <h3
+        <div
           css={css`
-            font-family: 'Oswald', sans-serif;
-            font-size: calc(0.5em + 0.9vw);
-            letter-spacing: 1px;
-            line-height: 1.5em;
-            text-transform: uppercase;
             opacity: 50%;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -82,16 +78,11 @@ const ProductItem = ({ data }) => {
             }
           `}
         >
-          {data.name}
-        </h3>
+          <H4>{data.name}</H4>
+        </div>
       </Link>
-
-      <span
+      <div
         css={css`
-          font-family: 'Roboto', sans-serif;
-          font-size: calc(0.3em + 0.8vw);
-          letter-spacing: 1px;
-          font-weight: bold;
           opacity: 40%;
           display: flex;
           justify-content: center;
@@ -100,8 +91,8 @@ const ProductItem = ({ data }) => {
           }
         `}
       >
-        Price: {data.price}
-      </span>
+        <Small>قیمت: {data.price} تومان</Small>
+      </div>
       <div
         css={css`
           display: flex;
@@ -140,7 +131,7 @@ const ProductItem = ({ data }) => {
                   }
                 `}
               >
-                Rimove from Cart{' '}
+                <Small> حذف از سبد خرید</Small>
               </div>
             </div>
           ) : (
@@ -155,12 +146,13 @@ const ProductItem = ({ data }) => {
               />{' '}
               <div
                 css={css`
+                  margin: auto 0;
                   @media only screen and (max-width: 768px) {
                     display: none;
                   }
                 `}
               >
-                Add to Cart
+                <Small>افزودن به سبد خرید</Small>
               </div>
             </div>
           )}

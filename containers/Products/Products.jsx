@@ -14,25 +14,22 @@ const Products = () => {
   }, [])
 
   return (
-   
-      <ul
-       css={css`
-       display: flex;
-       justufy-content: space-around;
-       padding:0;
-       margin-bottom:150px;
-      
-      
-       @media only screen and (max-width: 768px) {
-         flex-direction: column;
-       }
-       `}
-      >
-        {data.map((item) => (
-          <ProductItem key={`ProductItem-${item.id}`} data={item} />
-        ))}
-      </ul>
-    
+    <ul
+      css={css`
+        display: flex;
+        justufy-content: space-around;
+        padding: 0;
+        margin-bottom: 150px;
+
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+      `}
+    >
+      {data.map((item) => (
+        <ProductItem key={`ProductItem-${item.id}`} data={item} />
+      ))}
+    </ul>
   )
 }
 

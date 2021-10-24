@@ -1,9 +1,9 @@
 [
   {
     "id": "1",
-    "name": "INDONESIA COFFEE",
+    "name": "قهوه اندونزی",
     "image": "1.png",
-    "price": "25$",
+    "price": "675000",
     "region": "Kerinci Sumatra",
     "process": "Natural",
     "altitude": "1400-1700 msl",
@@ -12,9 +12,9 @@
   },
   {
     "id": "2",
-    "name": "ETHIOPIA COFFEE",
+    "name": "قهوه اتیوپی (سیدامو)",
     "image": "2.png",
-    "price": "30$",
+    "price": "810000",
     "region": "Sidamo",
     "process": "Fully Washed",
     "altitude": "1500-2000 msl",
@@ -23,9 +23,9 @@
   },
   {
     "id": "3",
-    "name": "ETHIOPIA COFFEE",
+    "name": "قهوه اتیوپی (یرگاچف)",
     "image": "3.png",
-    "price": "24$",
+    "price": "648000",
     "region": "Gotiti Yirgachefe Grade 1",
     "process": "Natural",
     "altitude": "1870-1980 msl",
@@ -34,9 +34,9 @@
   },
   {
     "id": "4",
-    "name": "TANZANIA COFFEE",
+    "name": "قهوه تانزانیا",
     "image": "4.png",
-    "price": "28$",
+    "price": "756000",
     "region": "Mbozi",
     "process": "Washed",
     "altitude": "1700 msl",

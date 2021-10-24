@@ -5,7 +5,7 @@ import { css, jsx } from '@emotion/react'
 import Image from 'next/image'
 import logoF from '../../public/assets/logoF.png'
 import coffeeRight from '../../public/assets/C.png'
-import SocialMedia from '../SocialMedia/SocialMedia'
+import SocialMedia from '../../components/SocialMedia/SocialMedia'
 
 export default function Footer() {
   const backgroundColor = '#516365'

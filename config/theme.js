@@ -38,9 +38,9 @@ const theme = {
       fontWeight: 400,
     },
     small: {
-      fontSize: 1,
+      fontSize: .9,
       lineHeight: 1.15,
-      fontWeight: 200,
+      fontWeight: 400,
     },
   },
   spaces: ['0px', '2px', '4px', '8px', '16px', '32px'],

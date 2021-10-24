@@ -9,7 +9,7 @@ import Image from 'next/image'
 import coffeeBean from '../../public/assets/coffee-bean.png'
 import huButton from '../../public/assets/hu.png'
 import closeButton from '../../public/assets/close.png'
-import { H5 } from '../index'
+import { H5 } from '../../components/index'
 
 export default function Navbar() {
   const hoverColor = '#516365'

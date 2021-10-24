@@ -3,11 +3,10 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
 import Image from 'next/image'
-import { H1, Paragraph } from '../index'
+import { H1, Paragraph } from '../../components/index'
 import AboutP from '../../public/assets/About.png'
 
 export default function About() {
-  const fontColor = '#554730'
   return (
     <div
       css={css`

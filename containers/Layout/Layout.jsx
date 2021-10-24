@@ -1,6 +1,6 @@
 import React,{useReducer} from 'react'
 import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import Footer from '../../containers/Footer/Footer'
 import CartContext from '../../context/CartContext'
 import CartReducer from '../../reducers/Cart'
 

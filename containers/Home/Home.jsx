@@ -5,7 +5,7 @@ import { css, jsx } from '@emotion/react'
 import Image from 'next/image'
 import cupImage from '../../public/assets/cup.png'
 import bndImage from '../../public/assets/based.png'
-import { H1 } from '../index'
+import { H1 } from '../../components/index'
 
 export default function Home() {
   return (

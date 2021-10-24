@@ -4,10 +4,18 @@
 import { css, jsx } from '@emotion/react'
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import Button from '../Button/Button'
+import Button from '../../components/Button/Button'
 import { validateEmail, validateSubject } from '../../utils/validation'
 import grinderImage from '../../public/assets/grinder.png'
-import { H2, Space, InputText, InputEmail, InputTextArea } from '../index'
+import {
+  H2,
+  Space,
+  Small,
+  InputText,
+  InputEmail,
+  InputTextArea,
+  
+} from '../../components/index'
 
 export default function Contact() {
   const [subject, setSubject] = useState('')
@@ -32,7 +40,7 @@ export default function Contact() {
       setSubject('')
       setErrors({
         ...errors,
-        subject: 'Subject must be more than 8 characters',
+        subject: 'موضوع شما باید بیشتر از هشت حرف باشد',
       })
     }
   }
@@ -49,7 +57,7 @@ export default function Contact() {
     } else {
       setErrors({
         ...errors,
-        email: 'Email is not valid',
+        email: 'ایمیل معتبر نیست',
       })
     }
   }
@@ -57,14 +65,15 @@ export default function Contact() {
     setTextArea(event.target.value)
     setTextAreaSubmited(true)
   }
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    if (event) event.preventDefault()
     if (subjectSubmited && emailSubmited && textAreaSubmited) {
       console.log('subject', subject)
       console.log('email', email)
       console.log('textArea', textArea)
-      setSent('Thanks for your comment or question')
+      setSent('از اینکه نظر یا سوال خود را به ما اعلام کردید سپاس گزاریم')
     } else {
-      setSent('Please enter the correct information')
+      setSent('لطفا اطلاعات را صحیح وارد کنید')
     }
   }
   const fontColor = '#554730'
@@ -79,7 +88,7 @@ export default function Contact() {
       css={css`
         display: flex;
         flex-direction: row;
-        height: 100vh;
+        height: 120vh;
       `}
     >
       <div>
@@ -100,7 +109,7 @@ export default function Contact() {
           <Space />
           <H2> تماس با ما</H2>
           {/* new form */}
-          <form>
+          <form onSubmit={handleSubmit}>
             <div
               css={css`
                 display: flex;
@@ -125,20 +134,18 @@ export default function Contact() {
                 placeholder="Topic"
               />
 
-              <div>
+              <div
+                css={css`
+                  color: red;
+                  opacity: 40%;
+                 
+                `}
+              >
                 {' '}
                 {errors.subject && (
-                  <span
-                    css={css`
-                      color: red;
-                      opacity: 40%;
-                      font-family: 'Oswald', sans-serif;
-                      font-size: 16px;
-                    `}
-                    className="error"
-                  >
-                    {errors.subject}
-                  </span>
+                  <Small
+                 
+                  className="error">{errors.subject}</Small>
                 )}
               </div>
             </div>
@@ -163,20 +170,20 @@ export default function Contact() {
                 type="email"
                 placeholder="name@example.com"
               />
-              <div>
+              <div
+                css={css`
+                color: red;
+                opacity: 40%;
+              `}
+              >
                 {' '}
                 {errors.email && (
-                  <span
-                    css={css`
-                      color: red;
-                      opacity: 40%;
-                      font-family: 'Oswald', sans-serif;
-                      font-size: 16px;
-                    `}
+                  <Small
+                  
                     className="error"
                   >
                     {errors.email}
-                  </span>
+                  </Small>
                 )}
               </div>
             </div>
@@ -202,22 +209,21 @@ export default function Contact() {
                 placeholder="Messege"
               />
             </div>
+
+            <div>
+              <Button type="submit">ارسال</Button>
+            </div>
           </form>
-          <div>
-            <Button handleClick={handleSubmit}>ارسال</Button>
-          </div>
-          <span
+          <Small
             css={css`
               color: #554730;
               opacity: 40%;
               padding-top: 10px;
-              font-family: 'Oswald', sans-serif;
-              font-size: 16px;
             `}
             className="sent"
           >
             {sent}
-          </span>
+          </Small>
         </div>
       </div>
       <div
